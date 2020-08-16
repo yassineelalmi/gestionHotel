@@ -18,7 +18,7 @@ class CreateChambresTable extends Migration
             $table->integer("num_chambre");
             $table->string("description");
             $table->integer("nombre_personne");
-            $table->float("prix");
+            $table->decimal("prix",9,2);
             $table->timestamps();
         });
     }

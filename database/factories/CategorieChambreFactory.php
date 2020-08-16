@@ -7,6 +7,7 @@ use Faker\Generator as Faker;
 
 $factory->define(CategorieChambre::class, function (Faker $faker) {
     return [
-        //
+        'libelle'=>$faker->sentence(2),
+
     ];
 });

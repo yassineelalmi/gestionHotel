@@ -19,10 +19,10 @@ class CreateClientsTable extends Migration
             $table->string('prenom_client', 50 );
             $table->string('adresse', 50 );
             $table->string('ville', 50 );
-            $table->string('pays', 20 );
-            $table->string('telephone', 25 );
+            $table->string('pays', 50 );
+            $table->string('telephone', 50 );
             $table->string('email', 100 );
-            $table->string('cin', 25 );
+            $table->string('cin', 50 );
             $table->string('Passport', 50 );
 
 

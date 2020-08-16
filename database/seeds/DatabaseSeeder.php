@@ -11,6 +11,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UserSeeder::class);
+        $this->command->call('migrate:refresh');
+        $this->call([
+            CategorieChambreSeeder::class,
+            ChambreSeeder::class,
+            ClientSeeder::class,
+            ReservationSeeder::class
+        ]);
     }
 }

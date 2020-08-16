@@ -27,8 +27,11 @@ class AddCategorieChambreIdToChambresTable extends Migration
      */
     public function down()
     {
+        Schema::disableForeignKeyConstraints();
         Schema::table('chambres', function (Blueprint $table) {
-            //
+            
+            $table->dropForeign('chambres_categorie_chambre_id_foreign');
         });
+        Schema::enableForeignKeyConstraints();
     }
 }
