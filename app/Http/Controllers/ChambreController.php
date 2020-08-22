@@ -19,15 +19,13 @@ class ChambreController extends Controller
 
     public function showBydate(Request $request)
     {
-        $date=$request->input('date_fin');
+        $date=$request->input('datedebut');
         return Chambre::whereHas('reservations',function($query) use ($date){
             $query->where('date_fin','>=',$date);
         })->get();
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
+    /**.00
      * @return \Illuminate\Http\Response
      */
     public function create()
@@ -54,7 +52,7 @@ class ChambreController extends Controller
      */
     public function show(Chambre $chambre)
     {
-        //
+        return $chambre;
     }
 
     /**
